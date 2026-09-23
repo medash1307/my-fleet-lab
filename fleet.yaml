@@ -1,1 +1,11 @@
 
+defaultNamespace: default
+
+# Target definitions
+targetCustomizations:
+  - name: local-lab-deploy
+    # This matches the cluster target. By default, Rancher's local cluster 
+    # has the label "local-cluster: true"
+    clusterSelector:
+      matchLabels:
+        local-cluster: "true"
